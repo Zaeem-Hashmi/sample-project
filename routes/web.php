@@ -22,3 +22,6 @@ Route::get('/repo',[UserController::class, 'index']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/submit/{id?}',[\App\Http\Controllers\DataController::class, 'index']);
+Route::get('/edit/{id}',[\App\Http\Controllers\DataController::class, 'edit']);
+Route::get('/del/{id}',[\App\Http\Controllers\DataController::class, 'del']);
